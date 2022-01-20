@@ -1,7 +1,7 @@
 .footer {
-  background-color: $sec-color;
+  background-color: sec-color;
   font-weight: 700;
-  color: $main-color;
+  color: main-color;
   font-size: 20px;
   height: 80px;
   line-height: 80px;

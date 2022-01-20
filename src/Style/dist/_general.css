@@ -1,0 +1,32 @@
+/* Genereal Ruls Start*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.conatiner {
+  width: 980px;
+  margin: auto;
+}
+
+.content {
+  height: 100vh;
+}
+
+/* Genereal Ruls End*/

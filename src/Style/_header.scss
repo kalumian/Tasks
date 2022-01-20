@@ -1,6 +1,6 @@
 /* Header Section Start*/
 .header {
-  background-color: var(--sec-color);
+  background-color: $sec-color;
 
   & .container {
     display: flex;
@@ -13,17 +13,17 @@
   }
   & .logo {
     font-size: 40px;
-    color: var(--main-color);
+    color: $main-color;
     font-weight: 700;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    text-shadow: var(--min-sh-);
+    text-shadow: $min-sh;
     cursor: pointer;
     @media (max-width: 500px) {
       font-size: 30px;
     }
     &:hover {
-      text-shadow: var(--min-sh-hover);
+      text-shadow: $min-sh-hover;
     }
   }
 
@@ -32,19 +32,22 @@
     align-items: center;
     padding: 0;
     & li {
-      padding: 40px 30px;
-      color: var(--main-color);
-      font-weight: 600;
-      cursor: pointer;
-      text-shadow: var(--min-sh-);
-      font-weight: 22px;
-      transition: 0.4s;
-      @media (max-width: 500px) {
-        padding: 20px 20px;
-      }
-      &:hover {
-        background-color: var(--bg-color);
-        text-shadow: var(--min-sh-hover);
+      & a {
+        padding: 40px 30px;
+        color: $main-color;
+        font-weight: 600;
+        display: block;
+        cursor: pointer;
+        text-shadow: $min-sh;
+        font-weight: 22px;
+        transition: 0.4s;
+        @media (max-width: 500px) {
+          padding: 20px 20px;
+        }
+        &:hover {
+          background-color: $bg-color;
+          text-shadow: $min-sh-hover;
+        }
       }
     }
   }

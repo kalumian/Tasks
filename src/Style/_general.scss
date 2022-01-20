@@ -4,27 +4,36 @@
   margin: 0;
   font-family: "Cairo", sans-serif;
 }
-:root {
-  --main-color: #22afc8;
-  --sec-color: #353434;
-  --bg-color: #222;
-  --min-sh-: 0 0 3px #ffffff45;
-  --min-sh-hover: 0 0 3px #ffffff7e;
-}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+  background-color: $bg-color;
 }
 ul {
   list-style: none;
   padding: 0;
 }
-.conatiner {
-  width: 980px;
-  margin: auto;
+a {
+  text-decoration: none;
 }
-.content {
-  height: 100vh;
+.container {
+  padding-right: 15;
+  padding-left: 15;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Small
+  @media (min-width: $sm) {
+    width: 750px;
+  }
+  // Medium
+  @media (min-width: $md) {
+    width: 992px;
+  }
+  // Large
+  @media (min-width: $lg) {
+    width: 1170px;
+  }
 }
 /* Genereal Ruls End*/
