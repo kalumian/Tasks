@@ -1,0 +1,30 @@
+/* Genereal Ruls Start*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+:root {
+  --main-color: #22afc8;
+  --sec-color: #353434;
+  --bg-color: #222;
+  --min-sh-: 0 0 3px #ffffff45;
+  --min-sh-hover: 0 0 3px #ffffff7e;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.conatiner {
+  width: 980px;
+  margin: auto;
+}
+.content {
+  height: 100vh;
+}
+/* Genereal Ruls End*/
