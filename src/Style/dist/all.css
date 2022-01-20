@@ -26,27 +26,43 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 500px) {
+@media (min-width: 750px) {
   .container {
     width: 750px;
   }
 }
-@media (min-width: 750px) {
+@media (min-width: 992px) {
   .container {
     width: 992px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
   .container {
     width: 1170px;
   }
 }
 
 /* Genereal Ruls End*/
+/* Start Anmition */
+@keyframes star {
+  10% {
+    box-shadow: -1px -1px 12px 8px #1fa0c742;
+  }
+  40% {
+    box-shadow: -1px -1px 12px 8px #27a7ce57;
+  }
+  90% {
+    box-shadow: -1px -1px 12px 8px #1c93b846;
+  }
+  100% {
+    box-shadow: -1px -1px 12px 8px #1fa0c742;
+  }
+}
+/* End Anmition */
 .footer {
   background-color: #353434;
   font-weight: 700;
-  color: #22afc8;
+  color: #1fa0c7;
   font-size: 20px;
   height: 80px;
   line-height: 80px;
@@ -70,7 +86,7 @@ a {
 }
 .header .logo {
   font-size: 40px;
-  color: #22afc8;
+  color: #1fa0c7;
   font-weight: 700;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-shadow: 0 0 3px #ffffff45;
@@ -91,7 +107,7 @@ a {
 }
 .header nav ul li a {
   padding: 40px 30px;
-  color: #22afc8;
+  color: #1fa0c7;
   font-weight: 600;
   display: block;
   cursor: pointer;
@@ -111,5 +127,46 @@ a {
 
 /* Header Section End*/
 .content {
-  height: 100vh;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background-color: #222;
+  box-shadow: 0 0 3px #ffffff45;
+}
+.content .header-content {
+  flex-grow: 6;
+}
+.content .header-content .form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.content .header-content .form .form-element {
+  flex-grow: 1;
+  margin: 10px 15px;
+  padding: 4px 10px;
+  outline: none;
+  box-shadow: -1px -1px 8px 1px #1fa0c742;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  animation: star 0.5s infinite;
+}
+.content .header-content .form input[type=submit] {
+  background-color: #1fa0c7;
+  font-weight: 700;
+  transition: 0.4s;
+  color: azure;
+}
+.content .header-content .form input[type=submit]:hover {
+  background-color: azure;
+  color: #1fa0c7;
+}
+.content .aside {
+  flex-grow: 2;
+  align-self: flex-start;
 }
