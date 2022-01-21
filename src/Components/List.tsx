@@ -1,44 +1,33 @@
-import React from "react";
+// Import Lib
+import React, { useState } from "react";
+import { Style } from "util";
+
+// Import Data
+import Data from "../data.json";
+
+// Import Components
+import Task from "./Task";
+
+// Import interface
+import { TaskInterface } from "../interfaces";
 
 const List: React.FC = () => {
+  const [Tasks, setTask] = useState<TaskInterface[]>([]);
   return (
-    <table>
-      <tr>
-        <th>-</th>
-        <th>-</th>
-        <th>المستوى</th>
-        <th>تاريخ</th>
-        <th>المهام</th>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>=</td>
-        <td>صعب</td>
-        <td>2004/5/5</td>
-        <td><textarea rows={1} cols={9}>حل الواجب</textarea></td>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>=</td>
-        <td>صعب</td>
-        <td>2004/5/5</td>
-        <td><textarea rows={1} cols={9}>حل الواجب</textarea></td>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>=</td>
-        <td>صعب</td>
-        <td>2004/5/5</td>
-        <td><textarea rows={1} cols={9}>حل الواجب</textarea></td>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>=</td>
-        <td>صعب</td>
-        <td>2004/5/5</td>
-        <td><textarea rows={1} cols={9}>حل الواجب</textarea></td>
-      </tr>
-    </table>
+    <div className="list">
+      <div className="row">
+        <div>تم</div>
+        <div>حذف</div>
+        <div>المستوى</div>
+        <div>التاريخ</div>
+        <div>المهمة</div>
+      </div>
+      {/* Tasks */}
+
+      {Tasks.map((item: TaskInterface, key: number) => {
+        return <Task item={item} key={key} />;
+      })}
+    </div>
   );
 };
 

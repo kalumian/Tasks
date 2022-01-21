@@ -1,26 +1,20 @@
 "use strict";
 exports.__esModule = true;
+// Import Lib
 var react_1 = require("react");
+// Import Components
+var Task_1 = require("./Task");
 var List = function () {
-    return (react_1["default"].createElement("table", null,
-        react_1["default"].createElement("tr", null,
-            react_1["default"].createElement("th", null, "X"),
-            react_1["default"].createElement("th", null, "\u062A\u0645 \u0627\u0644\u062D\u0644"),
-            react_1["default"].createElement("th", null, "\u0627\u0644\u0645\u0633\u062A\u0648\u0649"),
-            react_1["default"].createElement("th", null, "\u062A\u0627\u0631\u064A\u062E"),
-            react_1["default"].createElement("th", null, "\u0627\u0644\u0645\u0647\u0627\u0645")),
-        react_1["default"].createElement("tr", null,
-            react_1["default"].createElement("td", null, "1"),
-            react_1["default"].createElement("td", null, "2"),
-            react_1["default"].createElement("td", null, "3"),
-            react_1["default"].createElement("td", null, "4"),
-            react_1["default"].createElement("td", null,
-                react_1["default"].createElement("textarea", { rows: 2, cols: 9 }, "\u062A\u063A\u0633\u064A\u0644 \u0645\u0644\u0627\u0628\u0633"))),
-        react_1["default"].createElement("tr", null,
-            react_1["default"].createElement("td", null, "6"),
-            react_1["default"].createElement("td", null, "2"),
-            react_1["default"].createElement("td", null, "3"),
-            react_1["default"].createElement("td", null, "4"),
-            react_1["default"].createElement("td", null, "4"))));
+    var _a = react_1.useState([]), Tasks = _a[0], setTask = _a[1];
+    return (react_1["default"].createElement("div", { className: "list" },
+        react_1["default"].createElement("div", { className: "row" },
+            react_1["default"].createElement("div", null, "\u062A\u0645"),
+            react_1["default"].createElement("div", null, "\u062D\u0630\u0641"),
+            react_1["default"].createElement("div", null, "\u0627\u0644\u0645\u0633\u062A\u0648\u0649"),
+            react_1["default"].createElement("div", null, "\u0627\u0644\u062A\u0627\u0631\u064A\u062E"),
+            react_1["default"].createElement("div", null, "\u0627\u0644\u0645\u0647\u0645\u0629")),
+        Tasks.map(function (item, key) {
+            return react_1["default"].createElement(Task_1["default"], { item: item, key: key });
+        })));
 };
 exports["default"] = List;

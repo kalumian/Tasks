@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo">Tasks</div>
+        <div className="logo">TASKS</div>
         <nav className="nav">
           <ul>
             <ItemLink link={links.links.Home} title="الرئيسية" />

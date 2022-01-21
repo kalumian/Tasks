@@ -5,6 +5,7 @@ import React from "react";
 import List from "./List";
 import Form from "./Form";
 
+
 const Content: React.FC = () => {
   return (
     <>
@@ -17,7 +18,7 @@ const Content: React.FC = () => {
           <List />
         </header>
         <aside className="aside">
-          <header className="aside-header">اقسام</header>
+          <header className="aside-header">اضافة قسم</header>
           <button>الدراسة</button>
           <button>اعمال منزلية</button>
           <button>طلبات</button>

@@ -6,4 +6,7 @@
   height: 80px;
   line-height: 80px;
   text-align: center;
+  @media (max-width:$sm) {
+    font-size: 16;
+  }
 }

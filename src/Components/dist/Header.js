@@ -14,7 +14,7 @@ var ItemLink = function (_a) {
 var Header = function () {
     return (react_1["default"].createElement("header", { className: "header" },
         react_1["default"].createElement("div", { className: "container" },
-            react_1["default"].createElement("div", { className: "logo" }, "Tasks"),
+            react_1["default"].createElement("div", { className: "logo" }, "TASKS"),
             react_1["default"].createElement("nav", { className: "nav" },
                 react_1["default"].createElement("ul", null,
                     react_1["default"].createElement(ItemLink, { link: links_json_1["default"].links.Home, title: "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629" }),

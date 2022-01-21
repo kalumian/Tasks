@@ -13,6 +13,9 @@
   box-shadow: $min-sh;
   & .header-content {
     flex-grow: 6;
+    @media (max-width: $sm) {
+      overflow-x: scroll;
+    }
     & .form {
       display: flex;
       align-items: center;
@@ -44,7 +47,7 @@
         }
       }
       & select {
-        font-size: 14px;
+        font-size: 13px;
       }
       & option {
         background: #fffffff0;
@@ -65,35 +68,61 @@
         }
       }
     }
-    & table {
-      width: 95%;
-      background: rgb(31 160 199);
+    & .list {
+      max-width: 95%;
+      min-width: 600px;
       margin: 15px auto;
-      border-radius: 5px;
-      box-shadow: 0 0 19px 12px #ffffff1a;
-      border-collapse: collapse;
-      border: $main-color 3px solid;
-      & tr {
-        background: #fff;
-      }
-      & th {
-        font-weight: 600;
-        color: #1fa0bf;
-        text-shadow: 0 0 7px #0000005e;
-      }
-      & td{
-        font-size: 15px;
-        text-align: center;
-        font-weight: 600;
-      }
-      & textarea {
-        padding: 15px 0;
-        width: 100%;
-        border: none;
-        outline: none;
-        text-align: center;
-        font-size: 14px;
-        display: block;
+      & .row {
+        display: flex;
+        justify-content: space-between;
+        & div {
+          text-align: center;
+          margin: 3px 5px;
+          background-color: rgb(255, 255, 255);
+          border-right: 2px solid $main-color;
+          border-left: 2px solid $main-color;
+          border-radius: 2px;
+          &:nth-child(5) {
+            flex-basis: 40%;
+          }
+          &:nth-child(4) {
+            flex-basis: 25%;
+          }
+          &:nth-child(3) {
+            flex-basis: 15%;
+          }
+          &:nth-child(2) {
+            flex-basis: 10%;
+          }
+          &:nth-child(1) {
+            flex-basis: 10%;
+          }
+        }
+        &:first-child {
+          & div {
+            border-right: 4px solid #1fa0c7;
+            border-left: 7px solid #1fa0c7;
+            font-weight: 600;
+            border-radius: 0;
+            font-size: 17px;
+            text-shadow: 1px 1px 5px #1fa0c782;
+            margin-bottom: 10px;
+            @media (max-width: $sm) {
+              font-size: 13px;
+            }
+          }
+        }
+        & .select {
+          cursor: pointer;
+          transition: $ts1;
+          &:hover {
+            background-color: $main-color;
+            color: #fff;
+            border-right: 2px solid #fff;
+            font-weight: 600;
+            border-left: 2px solid #fff;
+          }
+        }
       }
     }
   }
@@ -105,13 +134,19 @@
     align-self: flex-start;
     flex-direction: column;
     & .aside-header {
-      margin: 15px;
+      margin: 10px;
+      padding: 5px;
       text-align: center;
       background: #353434;
       color: white;
+      transition: $ts1;
       font-weight: 600;
       border-radius: 2px;
       text-shadow: $sec-sh;
+      cursor: pointer;
+      &:hover {
+        background: #2e2d2d;
+      }
     }
     & button {
       margin: 9px auto;
