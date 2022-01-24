@@ -18,7 +18,6 @@ var ToHome_1 = require("./Components/ToHome"); // Import Style
 require("./Style/all.scss");
 
 var App = function App() {
-  // LocallStorage
   return react_1["default"].createElement(react_router_dom_1.BrowserRouter, null, react_1["default"].createElement(react_router_dom_1.Routes, null, react_1["default"].createElement(react_router_dom_1.Route, {
     path: links_json_1["default"].links.Home,
     element: react_1["default"].createElement(Home_1["default"], null)

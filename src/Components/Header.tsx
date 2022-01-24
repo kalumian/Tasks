@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Import Links
-import links from "../links.json";
+import links from "../Json/links.json";
 
 // Create Components
 type ItemLinkProps = { title: string; link: string }; // type for ItemLink
@@ -20,11 +20,13 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo">TASKS</div>
+        <div className="logo">
+          <Link to={"contant"}>TASKS</Link>
+        </div>
         <nav className="nav">
           <ul>
             <ItemLink link={links.links.Home} title="الرئيسية" />
-            <ItemLink link={links.links.Home} title="عن الموقع" />
+            <ItemLink link={links.links.Contant} title="عن الموقع" />
             <ItemLink link={links.links.Home} title="تواصل" />
             <ItemLink link={links.links.Home} title="تسجيل الدخول" />
           </ul>

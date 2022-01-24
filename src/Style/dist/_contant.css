@@ -1,0 +1,49 @@
+.contant section {
+  direction: rtl;
+  padding: 25px;
+  background-color: #222;
+  box-shadow: 0 0 3px #ffffff45;
+}
+.contant section:first-child {
+  margin-top: 50px;
+}
+.contant section:last-child {
+  margin-bottom: 50px;
+}
+.contant section h2 {
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 5px #1fa0c7;
+}
+.contant section p {
+  padding: 0 75px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #fff;
+  border-left: 2px solid #383838;
+}
+.contant section ul {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  list-style: outside;
+}
+.contant section ul li {
+  padding: 5px;
+  margin: 0px 10px;
+  text-shadow: 0 0 8px #1fa0c7;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.contant section ul li a {
+  padding: 5px;
+  margin: 0px 10px;
+  color: #fff;
+  text-shadow: 0 0 8px #1fa0c7;
+}
+.contant section ul li a:hover {
+  text-shadow: 0 0 15px #1fa0c7;
+}
+.contant section ul li:hover {
+  text-shadow: 0 0 15px #1fa0c7;
+}

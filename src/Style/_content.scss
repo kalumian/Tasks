@@ -6,6 +6,7 @@
   text-shadow: 1px 1px 5px #1fa0c7;
 }
 .content {
+  height: 100vh;
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -123,6 +124,23 @@
             border-left: 2px solid #fff;
           }
         }
+        & .button-trash,
+        & .button-correct {
+          transition: 0.4s;
+          cursor: pointer;
+          &:hover {
+            background-color: $main-color;
+            border-right: #fff 1px solid;
+            border-left: #fff 1px solid;
+            color: #fff;
+          }
+        }
+        & .button-trash {
+          color: $red-main;
+        }
+        & .button-correct {
+          color: $green-main;
+        }
       }
     }
   }
@@ -159,12 +177,33 @@
       color: azure;
       border: none;
       border-radius: 3px;
+      z-index: 5;
       outline: none;
+      position: relative;
       cursor: pointer;
       &:hover {
         background-color: azure;
         color: $main-color;
+        & i {
+          display: block;
+        }
       }
+      & i {
+        position: absolute;
+        color: $red-main;
+        display: none;
+        top: 50%;
+        font-size: 16px;
+        z-index: 10;
+        left: 10%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    & .finish-task {
+      background: $green-main;
+    }
+    & .aouther-task {
+      background: $red-main;
     }
   }
 }

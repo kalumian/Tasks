@@ -2,7 +2,12 @@
 
 exports.__esModule = true;
 
-var react_1 = require("react");
+var react_1 = require("react"); // Import Data
+
+
+var firestore_1 = require("firebase/firestore");
+
+var Firebase_1 = require("../Firebase/dist/Firebase");
 
 var Form = function Form() {
   var _a = react_1.useState(""),
@@ -15,15 +20,24 @@ var Form = function Form() {
 
   var _c = react_1.useState(0),
       def = _c[0],
-      setDef = _c[1];
+      setDef = _c[1]; // Add a second document with a generated ID.
+
 
   return react_1["default"].createElement("form", {
     className: "form",
     onSubmit: function onSubmit(e) {
       e.preventDefault();
-      setTitle("");
-      setDate({});
-      setDef(0);
+      firestore_1.addDoc(firestore_1.collection(Firebase_1.db, "TASKS"), {
+        title: title,
+        date1: "" + new Date().getDate(),
+        date2: date,
+        section: "test",
+        def: def
+      }).then(function (e) {
+        return console.log(e);
+      })["catch"](function (e) {
+        return console.log(e);
+      });
     }
   }, react_1["default"].createElement("input", {
     type: "text",

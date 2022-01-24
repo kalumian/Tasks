@@ -1,32 +1,39 @@
 // Import Lib
-import React, { useState } from "react";
-import { Style } from "util";
+import React from "react";
 
-// Import Data
-import Data from "../data.json";
+// Import Function
+import { Firebase } from "../Functions/FunctionsFirebase";
 
 // Import Components
 import Task from "./Task";
 
 // Import interface
-import { TaskInterface } from "../interfaces";
+import { TaskInterface } from "../Interfaces/interfaces";
 
-const List: React.FC = () => {
-  const [Tasks, setTask] = useState<TaskInterface[]>([]);
+const List: React.FC<{ section: string }> = ({ section }) => {
+  const firebase = Firebase();
+
   return (
     <div className="list">
       <div className="row">
-        <div>تم</div>
-        <div>حذف</div>
+        <div></div>
+        <div></div>
         <div>المستوى</div>
         <div>التاريخ</div>
         <div>المهمة</div>
       </div>
       {/* Tasks */}
-
-      {Tasks.map((item: TaskInterface, key: number) => {
-        return <Task item={item} key={key} />;
-      })}
+      {/* Filter Tasks True / False */}
+      {firebase.Tasks.filter((e) => {
+        if (section === "finish") {
+          return e.state === true;
+        }else{
+          return e.section === section && e.state !== true
+        }
+        
+      }).map((item: TaskInterface) => {
+        return <Task item={item} key={item.id} />;
+      }, 1000)}
     </div>
   );
 };

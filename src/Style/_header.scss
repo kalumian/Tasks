@@ -12,18 +12,19 @@
     }
   }
   & .logo {
-    font-size: 40px;
-    color: $main-color;
-    font-weight: 700;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    text-shadow: $min-sh;
-    cursor: pointer;
     @media (max-width: 500px) {
       font-size: 30px;
     }
-    &:hover {
-      text-shadow: $min-sh-hover;
+    & a {
+      color: $main-color;
+      text-shadow: $min-sh;
+      font-weight: 700;
+      font-size: 45px;
+      &:hover {
+        text-shadow: $min-sh-hover;
+      }
     }
   }
 
